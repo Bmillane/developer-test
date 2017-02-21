@@ -146,6 +146,12 @@ namespace OrangeBricks.Web.Controllers
             return View();
         }
 
+        public ActionResult YourAccount(string userName)
+        {
+            ApplicationUser user = UserManager.FindById(userName);
+            return View(user);
+        }
+
         #region Helpers
         // Used for XSRF protection when adding external logins
         private const string XsrfKey = "XsrfId";

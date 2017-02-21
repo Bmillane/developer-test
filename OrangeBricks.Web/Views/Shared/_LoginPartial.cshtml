@@ -7,7 +7,7 @@
 
     <ul class="nav navbar-nav navbar-right">
         <li>
-            <a href="#">Hello @User.Identity.GetUserName()!</a>
+            @Html.ActionLink("Your Account", "YourAccount", "Account", routeValues: new { userName = User.Identity.GetUserId() }, htmlAttributes: null)
         </li>
         <li><a href="javascript:document.getElementById('logoutForm').submit()">Log off</a></li>
     </ul>
@@ -19,4 +19,10 @@ else
         <li>@Html.ActionLink("Register", "Register", "Account", routeValues: null, htmlAttributes: new { id = "registerLink" })</li>
         <li>@Html.ActionLink("Log in", "Login", "Account", routeValues: null, htmlAttributes: new { id = "loginLink" })</li>
     </ul>
+
+
 }
+
+<input type="hidden" value="@User.Identity.GetUserName()" />
+<input type="hidden" value="@User.Identity.GetUserId()" />
+<input type="hidden" value="@User.Identity.Name" />
