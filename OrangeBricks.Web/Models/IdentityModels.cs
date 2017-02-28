@@ -45,24 +45,33 @@ namespace OrangeBricks.Web.Models
         public OrangeBrickUserOffersCollection GetPendingOffers()
         {
             OrangeBrickUserOffersCollection offers = new OrangeBrickUserOffersCollection();
-            foreach (var x in context.Offers)
-            {
-                if(x.Status == OfferStatus.Pending)
-                {
-                    offers.Add(x);
-                }
-            }
+            AddSpecificOfferType(OfferStatus.Pending, offers);
             return offers;
         }
 
         public OrangeBrickUserOffersCollection GetAcceptedOffers()
         {
-            throw new NotImplementedException();
+            OrangeBrickUserOffersCollection offers = new OrangeBrickUserOffersCollection();
+            AddSpecificOfferType(OfferStatus.Accepted, offers);
+            return offers;
         }
 
         public OrangeBrickUserOffersCollection GetRejectedOffers()
         {
-            throw new NotImplementedException();
+            OrangeBrickUserOffersCollection offers = new OrangeBrickUserOffersCollection();
+            AddSpecificOfferType(OfferStatus.Rejected, offers);
+            return offers;
+        }
+
+        private void AddSpecificOfferType(OfferStatus status, OrangeBrickUserOffersCollection offers)
+        {
+            foreach (var x in context.Offers)
+            {
+                if (x.Status == status)
+                {
+                    offers.Add(x);
+                }
+            }
         }
 
     }
