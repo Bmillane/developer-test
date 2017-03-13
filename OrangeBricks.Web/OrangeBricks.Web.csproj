@@ -228,6 +228,10 @@
     <Compile Include="Migrations\201505101607236_AddFieldsToOffers.Designer.cs">
       <DependentUpon>201505101607236_AddFieldsToOffers.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201703132258061_AppUserChanges.cs" />
+    <Compile Include="Migrations\201703132258061_AppUserChanges.Designer.cs">
+      <DependentUpon>201703132258061_AppUserChanges.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\ApplicationDbContext.cs" />
@@ -324,6 +328,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201505101607236_AddFieldsToOffers.resx">
       <DependentUpon>201505101607236_AddFieldsToOffers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201703132258061_AppUserChanges.resx">
+      <DependentUpon>201703132258061_AppUserChanges.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
