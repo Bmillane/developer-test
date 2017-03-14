@@ -172,6 +172,9 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Attributes\OrangeBricksAuthorizeAttribute.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\UserAccount\Builders\UserWithOffersViewModelBuilder.cs" />
+    <Compile Include="Controllers\UserAccount\UserAccountController.cs" />
+    <Compile Include="Controllers\UserAccount\ViewModels\UserWithOffersViewModel.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\Offers\Builders\OffersOnPropertyViewModelBuilder.cs" />
     <Compile Include="Controllers\Offers\Commands\AcceptOfferCommand.cs" />
@@ -231,6 +234,10 @@
     <Compile Include="Migrations\201703132258061_AppUserChanges.cs" />
     <Compile Include="Migrations\201703132258061_AppUserChanges.Designer.cs">
       <DependentUpon>201703132258061_AppUserChanges.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201703142052406_UserOffers.cs" />
+    <Compile Include="Migrations\201703142052406_UserOffers.Designer.cs">
+      <DependentUpon>201703142052406_UserOffers.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -297,6 +304,7 @@
     <Content Include="Views\Offers\OnProperty.cshtml" />
     <Content Include="Views\Account\YourAccount.cshtml" />
     <None Include="Views\Account\UnAuthorized.cshtml" />
+    <Content Include="Views\UserAccount\UserOffers.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -331,6 +339,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201703132258061_AppUserChanges.resx">
       <DependentUpon>201703132258061_AppUserChanges.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201703142052406_UserOffers.resx">
+      <DependentUpon>201703142052406_UserOffers.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

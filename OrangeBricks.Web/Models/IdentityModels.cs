@@ -18,6 +18,6 @@ namespace OrangeBricks.Web.Models
             return userIdentity;
         }
 
-        public virtual List<Offer> offers { get; set; }
+        public virtual List<Offer> Offers { get; set; }
     }
 }

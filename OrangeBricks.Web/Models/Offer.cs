@@ -18,5 +18,8 @@ namespace OrangeBricks.Web.Models
 
         [Required]
         public virtual ApplicationUser ApplicationUser { get; set; }
+
+        [Required]
+        public virtual Property Property { get; set; }
     }
 }

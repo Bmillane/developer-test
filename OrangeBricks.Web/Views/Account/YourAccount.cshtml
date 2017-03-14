@@ -1,7 +1,9 @@
-﻿
+﻿@using Microsoft.AspNet.Identity
+
 @{
     ViewBag.Title = "Account";
 }
 
 <h2>Account</h2>
 
+@Html.ActionLink("Your Offers", "UserOffers", "UserAccount", routeValues: new { id = User.Identity.GetUserId() }, htmlAttributes: null)
