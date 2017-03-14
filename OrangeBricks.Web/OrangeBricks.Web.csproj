@@ -239,6 +239,14 @@
     <Compile Include="Migrations\201703142052406_UserOffers.Designer.cs">
       <DependentUpon>201703142052406_UserOffers.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201703142216159_OfferChangesToUser.cs" />
+    <Compile Include="Migrations\201703142216159_OfferChangesToUser.Designer.cs">
+      <DependentUpon>201703142216159_OfferChangesToUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201703142230314_ChangesToApplicationUser.cs" />
+    <Compile Include="Migrations\201703142230314_ChangesToApplicationUser.Designer.cs">
+      <DependentUpon>201703142230314_ChangesToApplicationUser.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\ApplicationDbContext.cs" />
@@ -271,7 +279,9 @@
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
     <Content Include="Scripts\_references.js" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
@@ -342,6 +352,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201703142052406_UserOffers.resx">
       <DependentUpon>201703142052406_UserOffers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201703142216159_OfferChangesToUser.resx">
+      <DependentUpon>201703142216159_OfferChangesToUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201703142230314_ChangesToApplicationUser.resx">
+      <DependentUpon>201703142230314_ChangesToApplicationUser.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

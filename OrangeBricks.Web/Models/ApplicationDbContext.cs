@@ -16,6 +16,16 @@ namespace OrangeBricks.Web.Models
             return new ApplicationDbContext();
         }
 
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+
+            modelBuilder.Entity<ApplicationUser>().
+                HasMany(x => x.Offers)
+                .WithRequired()
+                .HasForeignKey(x => x.UserId);
+        }
+
         public IDbSet<Property> Properties { get; set; }
         public IDbSet<Offer> Offers { get; set; }
 

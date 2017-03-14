@@ -1,4 +1,5 @@
 ﻿@model OrangeBricks.Web.Controllers.Property.ViewModels.MakeOfferViewModel
+@using Microsoft.AspNet.Identity
 
 @{
     ViewBag.Title = "Make Offer";
@@ -15,6 +16,7 @@
         @Html.LabelFor(m => m.Offer, "Offer in GBP", new { @class = "col-md-2 control-label" })
         <div class="col-md-10">
             @Html.Hidden("PropertyId", Model.PropertyId)
+            @Html.Hidden("UserId", User.Identity.GetUserId())
             @Html.TextBoxFor(m => m.Offer, new {@class = "form-control"})
         </div>
     </div>

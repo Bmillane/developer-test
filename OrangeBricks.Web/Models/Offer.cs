@@ -16,8 +16,7 @@ namespace OrangeBricks.Web.Models
 
         public DateTime UpdatedAt { get; set; }
 
-        [Required]
-        public virtual ApplicationUser ApplicationUser { get; set; }
+        public string UserId { get; set; }
 
         [Required]
         public virtual Property Property { get; set; }
