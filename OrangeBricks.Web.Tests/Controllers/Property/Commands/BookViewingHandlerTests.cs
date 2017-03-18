@@ -9,7 +9,7 @@ using OrangeBricks.Web.Controllers.Property.Commands;
 using NSubstitute;
 using System.Data.Entity;
 
-namespace OrangeBricks.Web.Tests.Controllers.UserAccount
+namespace OrangeBricks.Web.Tests.Controllers.Property
 {
     [TestFixture]   
     public class Given_A_User

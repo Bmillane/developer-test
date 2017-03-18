@@ -172,8 +172,10 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Attributes\OrangeBricksAuthorizeAttribute.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\Property\Builders\BookViewingViewModelBuilder.cs" />
     <Compile Include="Controllers\Property\Commands\BookViewingCommandHandler.cs" />
     <Compile Include="Controllers\Property\Commands\BookViewingCommand.cs" />
+    <Compile Include="Controllers\Property\ViewModels\BookViewingViewModel.cs" />
     <Compile Include="Controllers\UserAccount\Builders\UserWithOffersViewModelBuilder.cs" />
     <Compile Include="Controllers\UserAccount\UserAccountController.cs" />
     <Compile Include="Controllers\UserAccount\ViewModels\UserWithOffersViewModel.cs" />
@@ -322,6 +324,7 @@
     <Content Include="Views\Account\YourAccount.cshtml" />
     <None Include="Views\Account\UnAuthorized.cshtml" />
     <Content Include="Views\UserAccount\UserOffers.cshtml" />
+    <Content Include="Views\Property\BookViewing.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

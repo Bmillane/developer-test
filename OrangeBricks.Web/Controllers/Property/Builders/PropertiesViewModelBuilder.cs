@@ -17,6 +17,7 @@ namespace OrangeBricks.Web.Controllers.Property.Builders
 
         public PropertiesViewModel Build(PropertiesQuery query)
         {
+            //Lazy loaded? If not then this would perform horribly at an enterprise level.
             var properties = _context.Properties
                 .Where(p => p.IsListedForSale);
 

@@ -1,0 +1,41 @@
+1. In terms of the tasks set so far, with the adding a book viewing option, I have done as the task suggested, however
+there are two key features missing, the first is the ability for the landlord to accept a viewing (the same way as they
+would an offer), and the second is the buyer's ability to view all viewings (the same way they can with offers).
+
+2. Better unit test coverage - Unit test coverage of the existing solution is very low in terms of classes covered 
+and scenarios covered, which all seem to be "happy path" and no edge cases/failure paths.
+
+3. There's no logging. I would opt for a combination of log4net with Application insights. log4net Usage would primarily
+be for error logging through Application Insights and also using the rolling file appender to leave a trace file on the
+server. Application Insights could be quickly set up to provide visualsation of stats such as Offers Made vs Offers Accepted
+and many other metrics that stakeholders would be interested in. It also tracks requests and responses and failures when
+communicating with third party components (database/external API's).
+
+4.There are no integration tests included at all, I would include these for direct testing of the entity framework
+implementation.
+
+5. There are no automated UI tests. I would implement Selenium and drive tests through this for all of the main actions.
+
+6. The UI doesnt give the User any sort of notification that an Offer has been made successfully. It does a redirect,
+I would improve the user experience here by giving them a visual notification.
+
+7. With this being a small test application it doesnt make sense to have it split out into multiple components. But at the
+enterprise level I would suggest going for a micro service architecture to allow team and component autonomy and faster
+development cycles. 
+
+8. Replace bootstrap with custom Css/Javascript. Bootstrap is so widely used across the web now that it's hard to differentiate
+between a site which has been put together in a couple of hours using wordpress for someone's vegan blog and an enterprise level
+behemoth which actually brings value to people.
+
+
+Other notes: 
+This is the most challenging technical test for an interview I've done, and it has also been enjoyable. With the first task,
+as It's been a while since i've used MVC and EF (the part of the Asos website I work on is purely server side, although I've
+done a lot with EF and MVC in the past) I decided to go with an approach where I wouldnt test first as I felt it would slow me
+down on getting a grip on these technologies. So I went with the spike and stablise approach https://lizkeogh.com/category/spike-and-stabilize/
+But without doing the stablisation part, as this is just throw away code. I demonstrated my TDD(the stablise aspect) approach instead on the
+second task. I did originally use MOQ in my tests, as I've used it many times before, but found it to be cumbersome when mocking Entity Framework.
+So I decided to use NSubstitute, the same as the existing tests, having never used it before I can say I'm impressed. It does
+a lot of things cleaner than MOQ, and I'll be trying to push its use at asos. I could have gone "overboard" in coding for this
+but as it is ultimately throwaway code and I feel as though I have done the tasks set out to a reasonable standard, but with
+full admittal that in a production environment I would put a lot more effort into testing, SOLID principals and code quality.

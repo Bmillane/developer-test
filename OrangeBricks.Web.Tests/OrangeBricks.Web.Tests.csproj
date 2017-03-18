@@ -105,10 +105,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controllers\Property\Builders\BookViewingsViewModelBuilderTests.cs" />
     <Compile Include="Controllers\Property\Builders\PropertiesViewModelBuilderTest.cs" />
     <Compile Include="Controllers\Property\Commands\CreatePropertyCommandHandlerTest.cs" />
     <Compile Include="Controllers\Property\Commands\ListPropertyCommandHandlerTest.cs" />
-    <Compile Include="Controllers\UserAccount\BookViewingHandlerTests.cs" />
+    <Compile Include="Controllers\Property\Commands\BookViewingHandlerTests.cs" />
+    <Compile Include="ExtensionMethods\IDbSetExtensionMethods.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
