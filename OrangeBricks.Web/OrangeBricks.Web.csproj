@@ -172,6 +172,8 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Attributes\OrangeBricksAuthorizeAttribute.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\Property\Commands\BookViewingCommandHandler.cs" />
+    <Compile Include="Controllers\Property\Commands\BookViewingCommand.cs" />
     <Compile Include="Controllers\UserAccount\Builders\UserWithOffersViewModelBuilder.cs" />
     <Compile Include="Controllers\UserAccount\UserAccountController.cs" />
     <Compile Include="Controllers\UserAccount\ViewModels\UserWithOffersViewModel.cs" />
@@ -247,9 +249,14 @@
     <Compile Include="Migrations\201703142230314_ChangesToApplicationUser.Designer.cs">
       <DependentUpon>201703142230314_ChangesToApplicationUser.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201703181518010_ViewingsModelsAdded.cs" />
+    <Compile Include="Migrations\201703181518010_ViewingsModelsAdded.Designer.cs">
+      <DependentUpon>201703181518010_ViewingsModelsAdded.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\ApplicationDbContext.cs" />
+    <Compile Include="Models\BookViewing.cs" />
     <Compile Include="Models\OfferStatus.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
@@ -358,6 +365,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201703142230314_ChangesToApplicationUser.resx">
       <DependentUpon>201703142230314_ChangesToApplicationUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201703181518010_ViewingsModelsAdded.resx">
+      <DependentUpon>201703181518010_ViewingsModelsAdded.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

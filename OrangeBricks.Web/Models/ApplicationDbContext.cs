@@ -24,10 +24,16 @@ namespace OrangeBricks.Web.Models
                 HasMany(x => x.Offers)
                 .WithRequired()
                 .HasForeignKey(x => x.UserId);
+
+            modelBuilder.Entity<ApplicationUser>().
+                HasMany(x => x.Viewings)
+                .WithRequired()
+                .HasForeignKey(x => x.UserId);
         }
 
         public IDbSet<Property> Properties { get; set; }
         public IDbSet<Offer> Offers { get; set; }
+        public IDbSet<Viewing> Viewings { get; set; }
 
         public new void SaveChanges()
         {
@@ -39,6 +45,7 @@ namespace OrangeBricks.Web.Models
     {
         IDbSet<Property> Properties { get; set; }
         IDbSet<Offer> Offers { get; set; }
+        IDbSet<Viewing> Viewings {get; set;}
 
         void SaveChanges();
     }

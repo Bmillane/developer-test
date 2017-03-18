@@ -19,5 +19,6 @@ namespace OrangeBricks.Web.Models
         }
 
         public virtual List<Offer> Offers { get; set; }
+        public virtual List<Viewing> Viewings { get; set; }
     }
 }

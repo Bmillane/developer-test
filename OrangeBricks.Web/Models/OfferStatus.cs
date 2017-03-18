@@ -1,6 +1,6 @@
 ﻿namespace OrangeBricks.Web.Models
 {
-    public enum OfferStatus
+    public enum Status
     {
         Pending,
         Accepted,
